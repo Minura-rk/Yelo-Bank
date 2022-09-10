@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Xeberler</title>
+{% endblock %}
+    
+{% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+{% endblock %}
+    
+</head>
+<body>
+        {% block header %}
+
+                {% include 'includes/header.html' %}
+
+        {% endblock %}
+
+        {% block content %}
+        <div class="content inner_page">
+                <div class="common_page_title">
+                        <h1>Xəbərlər</h1>
+                </div>
+                <div class="main_wrap">
+                        <ul class="news_list_total" style="display: none;">
+                                {% for a_news in all_news%}
+
+                                <li>
+                                        <div class="news_l_desc">
+                                                <b>{{a_news.title}}</b>
+                                                <p></p>
+                                                        <div class="news_foot">
+                                                        <a href="/news/{{a_news.slug_field}}" class="arr_bttn">Daha ətraflı</a>
+                                                        <time>{{a_news.date}}</time>
+                                                        </div>
+                                        </div>
+                                </li>
+
+                                {%endfor%}
+                        </ul>
+
+                        <ul class="news_list_limited">
+                                {% for a_news in all_news_limited %}
+                                <li>
+                                        <div class="news_l_desc">
+                                                <b>{{a_news.title}}</b>
+                                                <p></p>
+                                                        <div class="news_foot">
+                                                        <a href="/news/{{a_news.slug_field}}" class="arr_bttn">Daha ətraflı</a>
+                                                        <time>{{a_news.date}}</time>
+                                                        </div>
+                                        </div> 
+                                </li>
+                                {%endfor%}
+                        </ul>
+                <div class="news_link">
+                <button type="button" id="more_news">Daha çox </button>
+                </div>
+                </div>
+        </div>
+
+        {% endblock %}
+
+        {% block footer %}
+
+                {% include 'includes/footer.html' %}
+
+        {% endblock %}
+
+
+        {% block js %}
+                <script src="{{url_for('static', filename='js/main.js')}}"></script>
+                <script src="{{url_for('static', filename='js/news.js')}}"></script>
+        {% endblock %}
+</body>
+</html>

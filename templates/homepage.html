@@ -1,0 +1,413 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Yelo Bank - Muasir Bank Xidmetleri</title>
+{% endblock %}
+    
+{% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+{% endblock %}
+    
+</head>
+
+<body>
+    <!-- =====================================================================================================HEADER ===========================================================================-->
+    {% block header %}
+
+        {% include 'includes/header.html' %}
+
+    {% endblock %}
+    <!-- =====================================================================================================CARUSEL===========================================================================-->
+    {% block content %}
+    <div class="cont">
+        <input type="radio" id="i1" name="images" checked />
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        <input type="radio" id="i4" name="images" />
+        <input type="radio" id="i5" name="images" />
+
+        <div class="slide_content" id="one">
+            <div class="desc">
+                <div class="inner-div">
+                    <div class="text">
+                        <h3> Bu 13 sənə düşərli olacaq!</h3>
+                        <p>Tam online kredit</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="brand_btn" href="https://www.yelo.az/az/individuals/online-services/loan_request/#order_form" target="_blank">Sifariş et</a>
+                        </li>
+                     </ul>
+                </div>
+            </div>
+            <div class="slide_img">
+                <img src="{{url_for('static', filename='assest/images/13-site-file.png')}}" alt="#">
+            </div>
+        </div>
+
+        <div class="slide_content" id="two">
+            <div class="desc">
+                <div class="inner-div">
+                    <div class="text">
+                        <h3> Banka gəlmədən</h3>
+                        <p>Tam online kredit</p> 
+                    </div>
+                
+                <ul>
+                    <li>
+                        <a href="https://www.yelo.az/az/individuals/loans/online-kredit/" target="_blank" class="etrafli">
+                                <span>Daha ətraflı</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            
+            <div class="slide_img">
+                <img src="{{url_for('static', filename='assest/images/onlayn_kredit-saytcover.png')}}" alt="#">
+            </div>
+        </div>
+
+        <div class="slide_content" id="three">
+            <div class="desc">
+                <div class="inner-div">
+                    <div class="text">
+                        <h3>Ad günü hədiyyəsi</h3>
+                        <p>Endirimli və komissiyasız kredit</p> 
+                    </div>
+                
+                <ul>
+                    <li>
+                        <a href="https://www.yelo.az/az/individuals/online-services/loan_request/" target="_blank" class="brand_btn" >Sifariş et</a>
+                    </li>
+                    <li>
+                        <a href="https://www.yelo.az/az/news/ad-gunu-olanlara-komissiyasiz-v-2-endirimli-kredit/" class="etrafli" target="_blank" >
+                                <span>Daha ətraflı</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            
+            <div class="slide_img">
+                <img src="{{url_for('static', filename='assest/images/birthday_-_karusel_2.jpg')}}" alt="#">
+            </div>
+        </div>
+
+        <div class="slide_content" id="four">
+            <div class="desc">
+                <div class="inner-div">
+                    <div class="text">
+                        <h3>Baxışını dəyiş</h3>
+                    </div>
+               
+                <ul>
+                    <li>
+                        <a href="" class="brand_btn">Sifariş et</a>
+                    </li>
+                    <li>
+                        <a href="#" class="etrafli">
+                                <span>Daha ətraflı</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                </div>
+                    
+            <div class="slide_img">
+                <img src="{{url_for('static', filename='assest/images/1.png')}}" alt="#">
+            </div>
+        </div>
+
+        <div class="slide_content" id="five">
+            <div class="desc">
+                <div class="inner-div">
+                    <div class="text">
+                        <h3>Krediti cəmi 7 dəqiqəyə al</h3>
+                        <p>Online sifariş et,filiala gəlmə</p>
+                    </div>
+                
+                <ul>
+                    <li>
+                        <a href="https://www.yelo.az/az/individuals/online-services/loan_request/#order_form" target="_blank" class="brand_btn">Sifariş et</a>
+                    </li>
+                </ul>
+                </div>
+                </div>
+                   
+            <div class="slide_img">
+                <img src="{{url_for('static', filename='assest/images/yelo_az_-_7_deqiqe-aze_1.jpg')}}" alt="#">
+            </div>
+        </div>
+
+        <div id="nav_slide">
+            <label for="i1" class="dots" id="dot1"></label>
+            <label for="i2" class="dots" id="dot2"></label>
+            <label for="i3" class="dots" id="dot3"></label>
+            <label for="i4" class="dots" id="dot4"></label>
+            <label for="i5" class="dots" id="dot5"></label>
+        </div>
+
+        <label for="i4" class="dots" id="dot4"></label>
+        <label for="i5" class="dots" id="dot5"></label>
+    </div>
+    <div class="wrap-content">
+        <div class="block stories container">
+            <div class="block-title">
+                <div class="block-heading">
+                    <b>Storilər</b>
+                    <span class="counter">3</span>
+                </div>
+            </div>
+            <div class="block-content">
+                <div class="s_item first">
+                    <div class="story_content">
+                        <div class="story_desc">
+                            <a href="" class="tag">Kredit</a>
+                            <b>Xərclərini təxirə salma,hər zaman dəstək üçün Yelo Bank var</b>
+                        </div>
+                        <div class="story_image"></div>
+                    </div>
+                </div>
+                <div class="s_item second">
+                    <div class="story_content">
+                        <div class="story_desc">
+                            <a href="" class="tag">Cashback</a>
+                            <b>600-dən çox partnyoru özündə birləşdirən Cashback programı</b>
+                        </div>
+                        <div class="story_image"></div>
+                    </div>
+                </div>
+                <div class="s_item third">
+                    <div class="story_content">
+                        <div class="story_desc">
+                            <a href="" class="tag">Yelo kart</a>
+                            <b>Yelo kart hər əməliyyatda rahatlıq anlayışını dəyişəcək</b>
+                        </div>
+                        <div class="story_image"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block">
+
+                <div class="block_content cols">
+                        <div class="col col_1_5">
+                                <div class="col_content card_block">
+                                        <div class="card_3d"></div>
+                                        <div class="c_b_desc">
+                                                <b class="cb_b">Yelo Light</b>
+                                                <b class="cb_p">İstənilən ödənişlər üçün doğru seçim</b>
+                                                <div class="cb_is">
+                                                        <div class="cb_item">
+                                                                <p>Qalığa gəlir</p>
+                                                                <b>5%</b>
+                                                        </div>
+                                                         <div class="cb_item">
+                                                                <p>Cashback</p>
+                                                                <b>30%-dək</b>
+                                                        </div>
+                                                </div>
+                                                <a href="https://www.yelo.az/en/individuals/cards/yelo-kart-debet/" target="_blank" class="yelo_bttn">Sifariş et</a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col col_1_5">
+                                <div class="col_content loan_calculator">
+                                        <div class="cc_title">
+                                                <b>Kredit kalkulyatoru</b>
+                                                <a href="https://www.yelo.az/az/individuals/loans/consumer-loan/"  target="_blank" class="arr_bttn">Daha ətraflı</a>
+                                        </div>
+                                        <div class="loan_calc">
+                                                <div class="lc_inputs">
+                                                        <div class="lc_salary lc_item">
+                                                                <p>Aylıq əmək haqqı</p>
+                                                                <div>
+                                                                    <output id="rangevalue" class="range_result">7500</output>
+                                                                </div>
+                                                                <div class="lc_c">AZN</div>
+                                                                <input type="range" value="7500" min="350" max="15000" step='100'oninput="rangevalue.value=value">
+                                                        </div>
+                                                        <div class="lc_amount lc_item">
+                                                                <p>Məbləğ</p>
+                                                                <div>
+                                                                    <output id="rangevalue2" class="range_result">15000</output>
+                                                                </div>
+                                                                <div class="lc_c">AZN</div>
+                                                                <input type="range" value="15000" min="300" max="30000" id="my_credit" oninput="rangevalue2.value=value"/>
+                                                        </div>
+                                                        <div class="lc_term lc_item">
+                                                                <p>Müddət</p>
+                                                                <div>
+                                                                    <output id="rangevalue3" class="range_result">12</output>
+                                                                </div>
+                                                                <div class="lc_c">ay</div>
+                                                                <input type="range" value="12" min="6" max="48" id="my_month" oninput="rangevalue3.value=value"/>
+                                                        </div>
+                                                </div>
+                                                <div class="lc_result">
+                                                        <div class="lc_r_self" style="justify-content:center;">
+                                                                <div class="lc_r_item" style="text-align:right;width:33%;">
+                                                                        <p>Aylıq ödəniş</p>
+                                                                        <b id="my_month_pay">345.69<span> AZN</span></b>
+                                                                </div>
+                                    
+                                                        </div>
+                                                                <a href="https://www.yelo.az/az/individuals/loans/consumer-loan/#order_form" target="_blank" class="yelo_bttn">Kredit sifarişi</a>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div class="block">
+            <div class="block_title">
+                <div class="block_heading">
+                    <b>Sizin üçün faydalı</b>
+                </div>
+            </div>
+            <div class="block_content cols">
+                <div class="col col_2">
+                    <div class="col_content app_block">
+                        <div class="app_image">
+                            <div class="app_phone"></div>
+                            <div class="app_self"></div>
+                        </div>
+                        <div class="app_b_desc">
+                            <b class="app_b">YeloBank App</b>
+                            <p class="app_p">Yelo-dan yeni və parlaq mobil əlavə. Hesablarını izlə, köçürmə və ödənişlərini sürətli et.</p>
+                            <ul class="test">
+                                 <li>
+                                    <a href="https://apps.apple.com/az/app/yelo/id1515449668" class="store apple" target="_blank">
+                                    <div>
+                                    <span>Yüklə</span>
+                                    <p>App Store</p>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li>    
+                                    <a href="https://play.google.com/store/apps/details?id=az.yelo.app&amp;hl=ru" class="store google_play" target="_blank">
+                                    <div>
+                                    <span>Yüklə</span>
+                                    <p>Google Play</p>
+                                    </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://appgallery.huawei.com/#/app/C104500649" class="store huawei_play" target="_blank">
+                                    <div>
+                                    <span>Yüklə</span>
+                                    <p>AppGallery</p>
+                                    </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col_1">
+                <div class="col_content exchange_rate">
+                    <div class="cc_title">
+                        <b>Valyuta məzənnələri</b>
+                        <div class="change_rates">
+                            <a href="" class="active_lang open_select">Nağd</a>
+                            <div class="select_box">
+                                <div class="select_content">
+                                    <ul>
+            <li><a data-cash="1" href="#" class="active">Nağd</a></li>
+            <li><a data-cash="0" href="#">Nağdsız</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator">
+                        <div class="c_line">
+                            <input type="text" placeholder="Satıram" name="amount" class="c_int input_value only_number">
+                            <select name="from" class="s_curr">
+                                <option value="azn" selected="">AZN</option>
+                                <option value="usd">USD</option>
+                                <option value="eur">EUR</option> 
+                            </select>
+                        </div>
+                        <div class="c_line">
+                            <div class="c_int input_result">Alıram</div>
+                            <select name="to" class="s_curr">
+                                <option value="azn" style="display: none">AZN</option>
+                                <option value="usd" selected="">USD</option>
+                                <option value="eur">EUR</option> 
+                            </select>
+                        </div>
+                        <div class="c_result">
+                            <div class="cr_item">
+                                <p>Valyuta</p>
+                                <b class="cr_item_curr table_rate" data-curr="usd" style="display: block">USD</b>
+                                <b class="cr_item_curr table_rate" data-curr="eur" style="display: block">EUR</b>
+                            </div>
+                            <div class="cr_item">
+                                <p>Alış</p>
+                                <b class="cr_item_buy table_buy_rate buy_usd" id="buy_usd" data-curr="usd" style="display: block">{{'%0.4f'|format(dollar|float)}}</b>
+                                <b class="cr_item_buy table_buy_rate buy_eur" id="buy_eur" data-curr="eur" style="display: block">{{euro}}</b>
+                            </div>
+                             <div class="cr_item">
+                                <p>Satış</p>
+                                <b class="cr_item_sell table_sell_rate" data-curr="usd" id="sell_usd" style="display: block">1.7020</b>
+                                <b class="cr_item_sell table_sell_rate" data-curr="eur" id="sell_eur" style="display: block">1.8500</b>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="info_p">Region filiallarında məzənnələr fərqli ola bilər</p>
+                    <a href="https://www.yelo.az/az/exchange-rates/" target="_blank" class="all_exchanges">Bütün məzənnələr</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="block_title">
+                <div class="block_heading">
+                    <b>Son xəbərlər</b>
+                </div>
+            </div>
+            <div class="block_content cols">
+                {% for news in all_news %}
+                    <div class="col col_1">
+                        <div class="col_content">
+                            <div class="news_l_desc">
+                                <b>{{news.title}}</b>
+                                <div class="news_foot">
+                                    <a href="/news/{{news.slug_field}}" class="arr_bttn">Daha ətraflı</a>
+                                    <time>{{news.date}}</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {%endfor%}
+            </div>
+            <div class="news_link">
+                <a href="/news" class="arr_bttn">Bütün xəbərlər</a>
+            </div>
+        </div>
+
+
+        
+    </div>
+    {% endblock %}
+    
+    <!-- Stories================================================================ -->
+    
+
+    {% block footer %}
+
+        {% include 'includes/footer.html' %}
+
+    {% endblock %}
+
+
+    {% block js %}
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    {% endblock %}
+   
+</body>
+
+</html>
